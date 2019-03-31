@@ -1,0 +1,5 @@
+Protein_pos	Protein_ref	Protein_alt	Gene
+106	D	N	TRIM54
+75	T	M	PSMB8
+811	N	-	AHI1
+299	I	M	NLGN4X

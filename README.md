@@ -17,9 +17,11 @@
 
 This is the source code for **VarCoPP**, the Variant Combination Pathogenicity Predictor, which predicts the pathogenicity of
 bi-locus variant combinations (*i.e.* variants between two genes). It is based on the in-house developed code that
-was used to produce the performance results presented in the paper: Papadimitriou, S. *et al.* Predicting disease-causing variant combinations, *bioRxiv*, DOI: https://doi.org/10.1101/520353.
+was used to produce the performance results presented in the paper: Papadimitriou, S. *et al.* Predicting disease-causing variant combinations, *Proceedings of the National Academy of Sciences*. May 2019, DOI: https://doi.org/10.1073/pnas.1815601116.
 
-With this code you can re-train VarCoPP using the same training datasets that were used in the paper
+Please note that an online version of VarCoPP is available here: https://varcopp.ibsquare.be. 
+
+With the current code you can re-train VarCoPP using the same training datasets that were used in the paper
 (present in the **./training_data** directory) or try the current VarCoPP model on the validation data presented in the paper
 (Datasets S1 - S5, an example of Dataset S1 is available in the **./example_data** directory). 
 

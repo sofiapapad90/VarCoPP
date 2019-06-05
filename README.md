@@ -19,10 +19,10 @@ This is the source code for **VarCoPP**, the Variant Combination Pathogenicity P
 bi-locus variant combinations (*i.e.* variants between two genes). It is based on the in-house developed code that
 was used to produce the performance results presented in the paper: Papadimitriou, S. *et al.* Predicting disease-causing variant combinations, *Proceedings of the National Academy of Sciences*. May 2019, DOI: https://doi.org/10.1073/pnas.1815601116.
 
-**Please note that an online version of VarCoPP is available here: https://varcopp.ibsquare.be. This online version of the tool can predict bi-locus combinations from a given list of variants (SNPs and indels) belonging to one individual.**
-
-With the current code you can re-train VarCoPP using the same training datasets that were used in the paper
-(present in the **./training_data** directory) or try the current VarCoPP model on the validation data presented in the paper
+With the current code you can:
+1. re-train VarCoPP using the same annotated training datasets that were used in the paper
+(present in the **./training_data** directory) or
+2. try the current VarCoPP model on the annotated validation data used in the paper
 (Datasets S1 - S5, an example of Dataset S1 is available in the **./example_data** directory). 
 
 VarCoPP provides as output a .txt file containing a list of predictions for each digenic combination, including a final
@@ -31,7 +31,7 @@ each prediction (*i.e.* how many RFs agree for the disease-causing class) and th
 probability for the disease-causing class among all RFs), with the most probable disease-causing bi-locus combinations being 
 at the top of the list.
 
-
+**NOTE: this code requires already annotated data. An online version of VarCoPP that automatically annotates and predicts variant combinations is available here: https://varcopp.ibsquare.be. There, you can predict bi-locus combinations from a given list of variants (SNPs and indels) belonging to one individual.**
 
 
 ## 2. Prerequisites

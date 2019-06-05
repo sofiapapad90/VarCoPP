@@ -31,7 +31,7 @@ each prediction (*i.e.* how many RFs agree for the disease-causing class) and th
 probability for the disease-causing class among all RFs), with the most probable disease-causing bi-locus combinations being 
 at the top of the list.
 
-**NOTE: this code requires already annotated data. An online version of VarCoPP that automatically annotates and predicts variant combinations is available here: https://varcopp.ibsquare.be. There, you can predict bi-locus combinations from a given list of variants (SNPs and indels) belonging to one individual.**
+**NOTE: this code requires already annotated data. An online version of VarCoPP that automatically annotates and predicts variant combinations is available at: https://varcopp.ibsquare.be. There, you can predict bi-locus combinations from a given list of variants (SNPs and indels) belonging to one individual.**
 
 
 ## 2. Prerequisites

@@ -8,6 +8,7 @@
 1. Code usage - Train the model with **VarCoPP_train.py**
 1. Code usage - Assess performance with **VarCoPP_cross_validation.py**
 1. Flexibility and Hydrophobicity annotation with **calc_aa.diff.py**
+1. New VarCoPP model
 1. Contributors
 1. License 
 
@@ -241,8 +242,27 @@ The output is the same input variants file with appended at the end two extra
 `$ python calc_aa_diff.py`
 
 
+## 7. New VarCoPP model
 
-## 7. Contributors
+In 2021, we updated the VarCoPP model after re-training our training datasets with the most updated versions of all features. This model is present at the ./models/ directory as "VarCoPP_model_V2.p.gz". The new updated versions of the features are: 
+
+Database| Version
+--------|---------
+CADD |	v1.6 (GRCh37/hg19)
+GnoMAD	| v2.1.1 (GRCh37/hg19)
+Ensembl	| v101 (GRCh37/hg19)
+dbNSFP	| v4.1
+Uniprot |	v2020_05
+HGC (GDI and Biological distance) |v12.2015
+
+The new prediction probability threshold for this model is: 0.532
+
+DO NOT use the scripts present here with the new model, as the training sets correspond to those described in the paper, with the versions of the annotated features described in the paper. 
+
+The new model can be used online at: https://orval.ibsquare.be/. 
+
+
+## 8. Contributors
 
 Main contributor for source code: Sofia Papadimitriou
 
@@ -253,5 +273,5 @@ People who also contributed to the development of the code:
 
 
 
-## 8. License
+## 9. License
 This code is licensed under the GNU General Public License v3.0 (https://choosealicense.com/licenses/gpl-3.0/). 

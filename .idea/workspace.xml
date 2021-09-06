@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09090d6c-62c5-4bdc-859e-6924fb843316" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VarCoPP_cross_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/VarCoPP_cross_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictions.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="09090d6c-62c5-4bdc-859e-6924fb843316" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,55 +10,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VarCoPP.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
               <caret line="43" column="14" lean-forward="true" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VarCoPP_train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="31" selection-end-column="46" />
-              <folding>
-                <element signature="e#975#1006#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VarCoPP_cross_validation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
-              <folding>
-                <element signature="e#1962#1993#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="354">
-                <caret line="227" column="15" selection-start-line="227" selection-start-column="15" selection-end-line="227" selection-end-column="15" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/calc_aa_diff.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-625" />
           </provider>
         </entry>
       </file>
@@ -93,6 +46,7 @@
         <option value="$PROJECT_DIR$/VarCoPP_train.py" />
         <option value="$PROJECT_DIR$/VarCoPP_cross_validation.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/calc_aa_diff.py" />
       </list>
     </option>
   </component>
@@ -124,6 +78,11 @@
             <path>
               <item name="VarCoPP" type="b2602c69:ProjectViewProjectNode" />
               <item name="VarCoPP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VarCoPP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VarCoPP" type="462c0819:PsiDirectoryNode" />
+              <item name="example_data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -167,15 +126,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1630928583996</updated>
-      <workItem from="1630928587888" duration="3109000" />
+      <workItem from="1630928587888" duration="3376000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3109000" />
+    <option name="totallyTimeSpent" value="3376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="221" y="62" width="2224" height="1220" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16361137" />
@@ -246,6 +206,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/calc_aa_diff.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+          <folding>
+            <element signature="e#1736#1751#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="346">
+            <caret line="239" column="20" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarCoPP_cross_validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="923">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+          <folding>
+            <element signature="e#1962#1993#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/VarCoPP_train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -256,35 +246,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/calc_aa_diff.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-625" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VarCoPP_cross_validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
-          <folding>
-            <element signature="e#1962#1993#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VarCoPP.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="43" column="14" lean-forward="true" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="354">
-            <caret line="227" column="15" selection-start-line="227" selection-start-column="15" selection-end-line="227" selection-end-column="15" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>

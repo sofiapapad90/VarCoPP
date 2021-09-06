@@ -237,8 +237,8 @@ The output is the same input variants file with appended at the end two extra
 1. See help and input parameters of the script:
 `$ python calc_aa_diff.py -h`
 
-2. Annotate the variants of the "**example_variants.txt**" file:
-`$ python calc_aa_diff.py -v variants_file.txt -s fasta.txt`
+2. Annotate the data of the "**example_variants.txt**" file:
+`$ python calc_aa_diff.py`
 
 
 

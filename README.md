@@ -38,11 +38,11 @@ that are described in the paper.**
 This model is called VarCoPP_model_V2.p.gz and is available here on Github as well. DO NOT use this new model if you want to reproduce 
 the results described in the paper, but rather use the original model VarCoPP_model.p.gz 
 instead. Datasets are annotated with the same feature versions as the original model and probability parameters in the scripts
- relate to the original model as well. ** 
+ relate to the original model as well.** 
 
 An online version of VarCoPP that automatically annotates and predicts bi-locus variant combinations for an individual 
 is available at the ORVAL platform: https://orval.ibsquare.be/. There, the most updated VarCoPP model
- (see IMPORTANT NOTE 2) is used. **
+ (see IMPORTANT NOTE 2) is used.
 
 
 

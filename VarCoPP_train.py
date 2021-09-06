@@ -18,11 +18,18 @@
 
      Usage examples
    ===========================================================================
-   You can directly run the script with all the default parameters (the ones used for the paper as well):
-   Usage: $ python VarCoPP_train.py
+   You can directly run the script with all default parameters, i.e. the ones described in the paper):
+   $ python VarCoPP_train.py
 
-   In case you want to use a different output filename, you can specify it in the option -f.
-   Usage: $ python VarCoPP_train.py -f my_filename
+   In case you want to use different training set files, make sure to provide their complete path and name.
+
+   In case you want to use a different prefix for the output file, you can specify it in the option -f.
+   $ python VarCoPP_train.py -f test
+
+   Then, the output model will be named as: test_model.p
+
+   You can also specify a different output directory, which will be created in case it doesn't exist:
+   $ python VarCoPP_train.py -o test_directory
 
 
    '''
@@ -32,19 +39,21 @@ from sklearn.ensemble import RandomForestClassifier
 import os.path
 import argparse
 import random
-import _pickle as pickle
+import pickle
 
 
 def input_parser():
     """ Function to construct and parse input parameters """
 
     parser = argparse.ArgumentParser(usage=__doc__)
-    parser.add_argument('-n', '--neutral_dataset', help='.txt file with the 1KGP training features (DEFAULT: 1KGP_training_features.txt)', default = './1KGP_training_features.txt')
+    parser.add_argument('-n', '--neutral_dataset', help='.txt file with the 1KGP training features (DEFAULT: ./training_data/1KGP_training_features.txt)',
+                        default = './training_data/1KGP_training_features.txt')
     parser.add_argument('-d', '--dida_dataset',
-                        help='.txt file with the DIDA training features (DEFAULT: DIDA_training_features.txt', default = './DIDA_training_features.txt')
+                        help='.txt file with the DIDA training features (DEFAULT: ./training_data/DIDA_training_features.txt',
+                        default = './training_data/DIDA_training_features.txt')
     parser.add_argument('-o', '--outdir', help='Output directory - full path (DEFAULT: ./)', default = './')
     parser.add_argument('-f', '--filename',
-                        help='Specify the name of the file before the _symmary.txt and ' +
+                        help='Specify the prefix of the file before the _symmary.txt and ' +
                              '_iterations.txt (DEFAULT: training)', default='training')
     parser.add_argument('-e', '--features',
                         help='list of the feature names used, delimited by comma (do NOT provide it, if you wish to re-train the' +

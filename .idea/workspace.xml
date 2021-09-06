@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09090d6c-62c5-4bdc-859e-6924fb843316" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/validation_data/Dataset_S1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validation_data/Dataset_S2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validation_data/Dataset_S3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validation_data/Dataset_S4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validation_data/Dataset_S5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VarCoPP.py" beforeDir="false" afterPath="$PROJECT_DIR$/VarCoPP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VarCoPP_model.p.gz" beforeDir="false" afterPath="$PROJECT_DIR$/models/VarCoPP_model.p.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VarCoPP_model_V2.p.gz" beforeDir="false" afterPath="$PROJECT_DIR$/models/VarCoPP_model_V2.p.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_data/VarCoPP_cross_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/VarCoPP_cross_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_data/VarCoPP_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/VarCoPP_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VarCoPP_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/VarCoPP_train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +15,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VarCoPP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+            <state relative-caret-position="360">
+              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
               <folding>
                 <element signature="e#1354#1385#0" expanded="true" />
               </folding>
@@ -34,51 +25,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/predictions.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validation_data/Dataset_S1.txt">
+        <entry file="file://$PROJECT_DIR$/VarCoPP_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="107" selection-start-line="23" selection-start-column="107" selection-end-line="23" selection-end-column="107" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validation_data/Dataset_S2.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="686">
-              <caret line="100" column="100" selection-start-line="100" selection-start-column="100" selection-end-line="100" selection-end-column="100" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validation_data/Dataset_S3.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="686">
-              <caret line="1000" column="104" selection-start-line="1000" selection-start-column="104" selection-end-line="1000" selection-end-column="104" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validation_data/Dataset_S4.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="631">
-              <caret line="10000" column="96" selection-start-line="10000" selection-start-column="96" selection-end-line="10000" selection-end-column="96" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validation_data/Dataset_S5.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="48" column="100" selection-start-line="48" selection-start-column="100" selection-end-line="48" selection-end-column="100" />
+            <state relative-caret-position="263">
+              <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+              <folding>
+                <element signature="e#975#1006#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,6 +55,7 @@
         <option value="$PROJECT_DIR$/validation_data/Dataset_S4.txt" />
         <option value="$PROJECT_DIR$/validation_data/Dataset_S5.txt" />
         <option value="$PROJECT_DIR$/VarCoPP.py" />
+        <option value="$PROJECT_DIR$/VarCoPP_train.py" />
       </list>
     </option>
   </component>
@@ -141,6 +95,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -175,15 +130,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1630928583996</updated>
-      <workItem from="1630928587888" duration="939000" />
+      <workItem from="1630928587888" duration="1482000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="939000" />
+    <option name="totallyTimeSpent" value="1482000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="285" y="291" width="2034" height="1220" extended-state="0" />
+    <frame x="757" y="109" width="2034" height="1220" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -213,13 +168,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/validation_data/Dataset_S1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="107" selection-start-line="23" selection-start-column="107" selection-end-line="23" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/validation_data/Dataset_S2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="686">
@@ -248,18 +196,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/predictions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="129" selection-start-line="8" selection-start-column="129" selection-end-line="8" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation_data/Dataset_S1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="107" selection-start-line="23" selection-start-column="107" selection-end-line="23" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/VarCoPP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+        <state relative-caret-position="360">
+          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
           <folding>
             <element signature="e#1354#1385#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/predictions.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/VarCoPP_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+          <folding>
+            <element signature="e#975#1006#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

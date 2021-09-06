@@ -16,14 +16,14 @@
 ## 1. Summary - What is this code about?
 
 This is the source code for **VarCoPP**, the Variant Combination Pathogenicity Predictor, which predicts the pathogenicity of
-bi-locus variant combinations (*i.e.* variants between two genes). It is based on the in-house developed code that
+bi-locus variant combinations (*i.e.* variants between two genes). This is the in-house developed code that
 was used to produce the performance results presented in the paper: Papadimitriou, S. *et al.* Predicting disease-causing variant combinations, *Proceedings of the National Academy of Sciences*. May 2019, DOI: https://doi.org/10.1073/pnas.1815601116.
 
-With the current code you can:
-1. re-train VarCoPP using the same annotated training datasets that were used in the paper
-(present in the **./training_data** directory) or
-2. try the current VarCoPP model on the annotated validation data used in the paper
-(Datasets S1 - S5, an example of Dataset S1 is available in the **./example_data** directory). 
+With the current code you can reproduce the results described in the paper:
+1. re-train VarCoPP using the same annotated training datasets 
+(present in the **./training_data/** directory), or
+2. use the VarCoPP model (VarCoPP_model.p.gz) on the annotated validation data 
+(Dataset_S1 to S5, available in the **./validation_data/** directory). 
 
 VarCoPP provides as output a .txt file containing a list of predictions for each digenic combination, including a final
 class label (“**disease-causing**” or “**neutral**”) for each instance. This list is ranked based on the **Support Score** of 
@@ -31,7 +31,19 @@ each prediction (*i.e.* how many RFs agree for the disease-causing class) and th
 probability for the disease-causing class among all RFs), with the most probable disease-causing bi-locus combinations being 
 at the top of the list.
 
-**NOTE: this code requires already annotated data. An online version of VarCoPP that automatically annotates and predicts variant combinations is available at: https://varcopp.ibsquare.be. There, you can predict bi-locus combinations from a given list of variants (SNPs and indels) belonging to one individual.**
+**IMPORTANT NOTE1: this code requires already annotated data. The datasets available here are already annotated with the same features
+that are described in the paper.** 
+
+**IMPORTANT NOTE2: We have updated our VarCoPP model with the most updated versions of each feature. 
+This model is called VarCoPP_model_V2.p.gz and is available here on Github as well. DO NOT use this new model if you want to reproduce 
+the results described in the paper, but rather use the original model VarCoPP_model.p.gz 
+instead. Datasets are annotated with the same feature versions as the original model and probability parameters in the scripts
+ relate to the original model as well. ** 
+
+An online version of VarCoPP that automatically annotates and predicts bi-locus variant combinations for an individual 
+is available at the ORVAL platform: https://orval.ibsquare.be/. There, the most updated VarCoPP model
+ (see IMPORTANT NOTE 2) is used. **
+
 
 
 ## 2. Prerequisites
@@ -56,13 +68,12 @@ For scikit-learn version of >= 0.19 you may get the following warning when runni
 
 ## 3. Code usage - Predictions on the validation sets with VarCoPP.py
 
-It is advised that all input files are in the same directory as VarCoPP.py. Otherwise, the path of the files should also
-be provided in the arguments. All output is by default stored in the same directory as VarCoPP.py.
+If you don't use the default settings, make sure to always provide the directory path of the input files. The output is by default stored in the same directory as VarCoPP.py, unless otherwise specified. 
 
 #### INPUT: 
-To run VarCoPP.py on a validation set (for e.g. the Dataset S1 present in the **./example_data** directory), 
+To run VarCoPP.py on a validation set, 
 you need: 
-1. a .txt tab-delimited file with the features for each combination. This file should contain, first, a column with the combination ID and then the columns for the 
+1. the validation data set file, that contains (as all input files), first, a column with the combination ID and then the columns for the 
 11 annotated features in the order they appear in the dataset (Flex1, Hydr1, CADD1, CADD2, CADD3, CADD4, HI_A, Rec_A, HI_B, 
 Rec_B, Biol_Dist).
 2. the trained VarCoPP model "**VarCoPP_model.p.gz**”
@@ -77,31 +88,32 @@ most probable disease-causing combinations being at the top of the list.
 1. See help and input parameters of the script:
 `$ python VarCoPP.py -h`
 
-2. Run the script with default settings (the ones used in the paper) on the example validation combinations (Dataset S1 in the paper)
-`$ python VarCoPP.py -v ./example_data/validation_combinations.txt`
+2. Run VarCoPP on the Dataset S1 described in the paper:
+`$ python VarCoPP.py -v ./validation_data/Dataset_S1.txt`
 
 
 
 
 ## 4. Code usage - Train the model with VarCoPP_train.py
 
-For validation purposes, we also provide the source code (VarCoPP_train.py) that can train a new model of the predictor,
-in the **./training_data** directory. The training data sets are also present in this folder.
+For validation purposes, we also provide the source code (VarCoPP_train.py) that can train a new model of the predictor. 
+The training data sets are present in the ./training_data/ directory.
 
-It is advised that all required input files are in the same directory as VarCoPP_train.py. Otherwise, the path of the files
-should also be provided in the arguments. All output is by default stored in the same directory as VarCoPP_train.py.
+If you don't use the default training sets, make sure to always provide the directory path of the input files. 
+The output is by default stored in the same directory as VarCoPP_train.py, unless otherwise specified. 
+
 
 
 #### INPUT :
 To run VarCoPP_train.py you need: 
 1. the "**1KGP_training_features.txt**" file with the 1KGP training sets
 (200 combinations per set) present in the **./training_data** directory and the
-2. "**DIDA_training_features.txt**" file with the DIDA training set (200 combinations) present in the same directory
+2. "**DIDA_training_features.txt**" file with the DIDA training set (200 combinations) present in the **./training_data** directory
 
 
 #### OUTPUT:
-A cPickle (.p) file with the trained model in the form of a LIST of 500 Random Forests. The output 
-file is ready to be used in VarCoPP.py.
+A cPickle (.p) file with the trained model in the form of a LIST of 500 Random Forests. 
+The new trained model is then ready to be used in VarCoPP.py.
 
 
 #### USAGE EXAMPLES :
@@ -111,21 +123,21 @@ file is ready to be used in VarCoPP.py.
 2. Re-train the model using the same parameters (and training data sets) as the ones used in the paper:
 `$ python VarCoPP_train.py`
 
-2. In case you want to use a different output filename, you can specify it in the option -f.
-`$ python VarCoPP_train.py -f my_filename`
+2. In case you want to use a different prefix in the model, you can specify it in the option -f.
+`$ python VarCoPP_train.py -f test`
 
 
 **NOTE**: The user should keep in mind that due to the randomness of the RF procedure when training the predictor, they may
-not obtain the same predictor model as the one present in the “VarCoPP_model.p.gz” with this script.
+not obtain the same predictor model as the one present in the original “VarCoPP_model.p.gz” with this script.
 Therefore, if they attempt to run VarCoPP.py with the new trained model obtained by this script, the CS and SS scores of the
-example data may very slightly differ.
+example data may very slightly differ. 
 
 
 
 ## 5. Code usage - Assess performance with VarCoPP_cross_validation.py
 	
 	
-This script can replicate the cross-validation procedure that was performed in the paper for the training set present in 
+This script can replicate the cross-validation procedure that was described in the paper for the training sets present in 
 the **./training_data** directory. The validation procedure for each balanced set is the LeaveOneGenePairOut procedure,
 as described in the paper.
 
@@ -134,14 +146,14 @@ balanced set.
 
 This script does **NOT** store a VarCoPP model, but provides performance statistics among the different individual predictors.
 
-It is advised that all required input files are in the same directory as VarCoPP_cross_validation.py. Otherwise, the path of the files
-should also be provided in the arguments. All output is by default stored in the same directory as VarCoPP_cross_validation.py.
+If you don't use the default training sets, make sure to always provide the directory path of the input files. 
+The output is by default stored in the same directory as VarCoPP_cross_validation.py, unless otherwise specified. 
 
 #### INPUT :
 1. the "**1KGP_training_features.txt**" file with the 1KGP training sets (200 combinations per set)
-2. the "**DIDA_training_features.txt**" file with the DIDA training set (200 combinations) and the 
+2. the "**DIDA_training_features.txt**" file with the DIDA training set (200 combinations)
 3. "**training_data_pairs.txt** " file with the pair information for all combination IDs present in the training data
-All files are present in the **./training_data** directory. 
+All files are present in the **./training_data/** directory. 
 
 
 #### OUTPUT :
@@ -163,11 +175,11 @@ All files are present in the **./training_data** directory.
 2. Re-train the model using the same parameters and training data sets as the ones used in the paper:
 `$ python VarCoPP_cross_validation.py`
 
-2. In case you want to use a different output filename, you can specify it in the option -f.
-`$ python VarCoPP_cross_validation.py -f my_filename`
+2. In case you want to use a different prefix for the output files, you can specify it in the option -f.
+`$ python VarCoPP_cross_validation.py -f test`
 
 
-**NOTE:** The running time for this script is around 16-20 hours, if run in a single core. The user should take this into
+**NOTE:** The running time for this script can reach around 16-20 hours. The user should take this into
 consideration before running the code.
 
 **NOTE:** The user should keep in mind that due to the randomness of the RF procedure when training the predictor, they may
@@ -175,10 +187,10 @@ not obtain exactly the cross-validation result statistics as the ones presented 
 
 
 
-
 ## 6. Flexibility and Hydrophobicity annotation with calc_aa_diff.py
 
-We also provide the in-house developed script calc_aa_diff.py to annotate variants with flexibility and hydrophobicity differences.
+We also provide the in-house developed script calc_aa_diff.py to annotate variants with flexibility and hydrophobicity differences. 
+This is not needed for the previous scripts, as they only use pre-annotated data. We provide this code for fairness purposes. 
 
 Make sure that you provide the complete path of the input files for this script (see below at the usage examples).
 
@@ -212,7 +224,8 @@ splicing variant    |   0    |                  -      |             -
 	Protein sequence
 	...
 
-An "**example_variants.txt**" file and an "**example_sequences.fasta**" file are available at the **./example_data** directory.
+An "**example_variants.txt**" file and an "**example_sequences.fasta**" file are available at the **./example_data** directory and can be used
+for this script.
 
 #### OUTPUT : 
 The output is the same input variants file with appended at the end two extra
@@ -242,4 +255,3 @@ People who also contributed to the development of the code:
 
 ## 8. License
 This code is licensed under the GNU General Public License v3.0 (https://choosealicense.com/licenses/gpl-3.0/). 
-

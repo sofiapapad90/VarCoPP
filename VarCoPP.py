@@ -14,11 +14,11 @@
    Flex1, Hydr1, CADD1, CADD2, CADD3, CADD4, HI_A, RecA, HI_B, RecB, Biol_Dist.
 
 
-   == PROCESS ==: The script uses the already created VarCoPP model to predict the pathogenicity of each bi-locus
+   == PROCESS ==: The script uses the already created VarCoPP model (./models/VarCoPP_model.p.gz) to predict the pathogenicity of each bi-locus
    combination in the file.
 
 
-   == OUTPUT ==: the “predictions.txt” file with a ranked list of bi-locus combinations based on their
+   == OUTPUT ==: the predictions.txt file with a ranked list of bi-locus combinations based on their
     Support and Classification Scores
 
 
@@ -26,12 +26,16 @@
    Usage examples
    ===========================================================================   
    
-   To run VarCoPP.py with the default parameters for the "validation_combinations.txt" file, you can simply call the
+   To run VarCoPP.py with the default parameters for the "Dataset_S1.txt" file, you can simply call the
    script:
-   Usage: $ python VarCoPP.py -v ./example_data/validation_combinations.txt
+   $ python VarCoPP.py -v ./validation_data/Dataset_S1.txt
 
-   If the file is also in a different directory, provide the file's path:
-   Usage: $ python VarCoPP.py -v /Users/Desktop/Files/NameOfFile.txt                       
+   Make sure that if the file is not in the same directory as VarCoPP.py, you always provide each path.
+
+   You can specify a prefix for the output file like this:
+   $ python VarCoPP.py -v ./validation_data/Dataset_S1.txt -f test
+
+   Then, the output file will be named: test_predictions.txt
    
 
    '''
@@ -40,7 +44,7 @@ from __future__ import division
 import os.path
 import argparse
 import tarfile
-import _pickle as pickle
+import pickle
 import numpy as np
 import gzip
 
@@ -51,11 +55,10 @@ def input_parser():
  
     parser = argparse.ArgumentParser(usage=__doc__)
     parser.add_argument('-v','--combs_file', 
-                        help = 'File with bi-locus combinations (DEFAULT: ./example_data/validation_combinations.txt)',
-                        default='./example_data/validation_combinations.txt')
+                        help = 'File with bi-locus combinations')
     parser.add_argument('-m','--model', 
-                        help = 'File with trained VarCoPP model (DEFAULT: VarCoPP_model.p.gz)',
-                        default='VarCoPP_model.p.gz')
+                        help = 'File with trained VarCoPP model (DEFAULT: ./models/VarCoPP_model.p.gz)',
+                        default='./models/VarCoPP_model.p.gz')
     parser.add_argument('-f','--filename', 
                         help = 'Specify the prefix name of the output file',
                         default='')

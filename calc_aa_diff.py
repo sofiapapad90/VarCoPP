@@ -31,10 +31,10 @@
    ===========================================================================
    
    To run the script with the example variant and fasta files:
-   Usage: $ python calc_aa_diff.py -v ./example_data/example_variants.txt -s ./example_data/example_sequences.fasta
+   Usage: $ python calc_aa_diff.py
    
    To provide a prefix at the output file, use option -f: 
-   Usage: $ python calc_aa_diff.py -v ./example_data/example_variants.txt -s ./example_data/example_sequences.fasta -f test
+   Usage: $ python calc_aa_diff.py -f test
 
  
 '''
@@ -49,10 +49,12 @@ def input_parser():
  
     parser = argparse.ArgumentParser(usage=__doc__)    
     parser.add_argument('-v','--variants_file', 
-                        help = 'Input variants file')
+                        help = 'Input variants file (DEFAULT:./example_data/example_variants.txt',
+                        default='./example_data/example_variants.txt')
     parser.add_argument('-s','--fasta_file', 
-                        help = 'Fasta file with gene/Uniprot identifiers (should be present in the variants file)'+\
-                               ' and protein sequences')
+                        help = 'Fasta file with gene/Uniprot identifiers and protein sequences (DEFAULT: ./example_data/example_sequences.fasta)',
+                        default='./example_data/example_sequences.fasta'
+                               )
     parser.add_argument('-f','--filename',
                         help = 'Prefix name of the output file',
                         default='')

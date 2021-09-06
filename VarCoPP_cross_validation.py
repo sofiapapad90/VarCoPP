@@ -27,17 +27,24 @@
 
     Usage examples
    ===========================================================================
-   You can directly run the script with all the default parameters (the ones used for the paper as well):
-   Usage: $ python VarCoPP_cross_validation.py
+   You can directly run the script with all the default parameters described in the paper as:
+   $ python VarCoPP_cross_validation.py
 
-   In case you want to use a different output filename, you can specify it in the option -f.
-   Usage: $ python VarCoPP_cross_validation.py -f my_filename
+   In case you want to use a different prefix for the output file, you can specify it in the option -f.
+   $ python VarCoPP_cross_validation.py -f test
+
+   Then, the name of the output files will be named test_summary.txt, etc.
 
    In case you want to change the disease-causing probability threshold to the standard 0.50, you can use the
    -s CLASS_THRESHOLD parameter.
-   Usage: $ python VarCoPP_cross_validation.py -s 0.5
+   $ python VarCoPP_cross_validation.py -s 0.5
 
-   *** NOTE:  You don't have to specify the -e FEATURES parameter, unless you want to remove some features from the
+   You can also specify a different output directory, which will be created in case it doesn't exist:
+   $ python VarCoPP_cross_validation.py -o test_directory
+
+   For any different input training files, make sure to provide the complete path and name.
+
+   *** NOTE:  Leave the -e FEATURES parameter intact, unless you want to remove some features from the
    features list.
 
 
@@ -62,17 +69,17 @@ def input_parser():
     """ Function to construct and parse input parameters """
 
     parser = argparse.ArgumentParser(usage=__doc__)
-    parser.add_argument('-n', '--neutral_dataset', help='.txt file with the 1KGP training features (DEFAULT: 1KGP_training_features.txt)',
-                        default='./1KGP_training_features.txt')
+    parser.add_argument('-n', '--neutral_dataset', help='.txt file with the 1KGP training features (DEFAULT: ./training_data/1KGP_training_features.txt)',
+                        default='./training_data/1KGP_training_features.txt')
     parser.add_argument('-d', '--dida_dataset',
-                        help='.txt file with the DIDA training features (DEFAULT: DIDA_training_features.txt)',
-                        default='./DIDA_training_features.txt')
+                        help='.txt file with the DIDA training features (DEFAULT: ./training_data/DIDA_training_features.txt)',
+                        default='./training_data/DIDA_training_features.txt')
     parser.add_argument('-p', '--training_pairs',
-                        help='.txt file with gene pair information of all training data (DEFAULT: training_data_pairs.txt',
-                        default = './training_data_pairs.txt')
+                        help='.txt file with gene pair information of all training data (DEFAULT: ./training_data/training_data_pairs.txt',
+                        default = './training_data/training_data_pairs.txt')
     parser.add_argument('-o', '--outdir', help='Output directory - full path (DEFAULT: ./)', default = './')
     parser.add_argument('-f', '--filename',
-                        help='Specify the name of the file before the _symmary.txt and ' +
+                        help='Specify the prefix of the file before the _symmary.txt and ' +
                              '_iterations.txt (DEFAULT: training_cross_val)', default='training_cross_val')
     parser.add_argument('-e', '--features',
                         help='list of the feature names used, delimited by comma (do NOT provide it if you wish to re-train the' +

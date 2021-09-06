@@ -272,7 +272,7 @@ HGC (GDI and Biological distance) |v12.2015
 
 The new prediction probability threshold for this model is: 0.532
 
-DO NOT use the scripts present here with the new model, as the training sets correspond to those described in the paper, with the versions of the annotated features described in the paper. 
+DO NOT use the scripts and training sets present here with the new model, as the training sets correspond to those described in the paper, with the versions of the annotated features described in the paper. 
 
 The new model can be used directly online at: https://orval.ibsquare.be/. 
 

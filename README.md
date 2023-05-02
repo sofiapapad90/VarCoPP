@@ -9,7 +9,8 @@
 1. Code usage - Assess performance with **VarCoPP_cross_validation.py**
 1. Flexibility and Hydrophobicity annotation with **calc_aa.diff.py**
 1. Versions of the annotated features for the datasets
-1. New VarCoPP model
+1. VarCoPP model 1.1 - April 2021
+1. VarCoPP model 2.3 - May 2023 
 1. Contributors
 1. License 
 
@@ -20,6 +21,10 @@
 This is the source code for **VarCoPP**, the Variant Combination Pathogenicity Predictor, which predicts the pathogenicity of
 bi-locus variant combinations (*i.e.* variants between two genes). This is the in-house developed code that
 was used to produce the performance results presented in the paper: Papadimitriou, S. *et al.* Predicting disease-causing variant combinations, *Proceedings of the National Academy of Sciences*. May 2019, DOI: https://doi.org/10.1073/pnas.1815601116.
+
+An online version of VarCoPP that automatically annotates and predicts bi-locus variant combinations for an individual 
+is available at the ORVAL platform: https://orval.ibsquare.be/. There, the most updated VarCoPP model
+ (see updates below) is used. 
 
 With the current code you can reproduce the results described in the paper:
 1. re-train VarCoPP using the same annotated training datasets 
@@ -33,18 +38,13 @@ each prediction (*i.e.* how many RFs agree for the disease-causing class) and th
 probability for the disease-causing class among all RFs), with the most probable disease-causing bi-locus combinations being 
 at the top of the list.
 
-**IMPORTANT NOTE1: this code requires already annotated data. The datasets available here are already annotated with the same features
+**IMPORTANT NOTE: this code requires already annotated data. The datasets available here are already annotated with the same features
 that are described in the paper.** 
 
-**IMPORTANT NOTE2: We have updated our VarCoPP model with the most updated versions of each feature. 
-This model is called VarCoPP_model_V2.p.gz and is available here on Github as well. DO NOT use this new model if you want to reproduce 
-the results described in the paper, but rather use the original model VarCoPP_model.p.gz 
-instead. Datasets are annotated with the same feature versions as the original model and probability parameters in the scripts
- relate to the original model as well.** 
+**MAIN MODEL UPDATE 1: In April 2021, we updated the VarCoPP model with the most updated versions of each feature (see section 8: VarCoPP model 1.1 - April 2021). This model is called VarCoPP_model_V2.p.gz and is available here on Github as well in the /models folder. DO NOT use this new model if you want to reproduce the results described in the paper, but rather use the original model VarCoPP_model.p.gz  instead. The datasets here are annotated with the same feature versions as the original model and probability parameters in the scripts relate to the original model as well.** 
 
-An online version of VarCoPP that automatically annotates and predicts bi-locus variant combinations for an individual 
-is available at the ORVAL platform: https://orval.ibsquare.be/. There, the most updated VarCoPP model
- (see IMPORTANT NOTE 2) is used.
+**MAIN MODEL UPDATE 2: In May 2023, we created and published a new VarCoPP model (2.3) with new training sets and features. Consult the section 9: VarCoPP model 2.3 - May 2023, for information on this model and the github link to access it. This model is the current version in ORVAL.** 
+
 
 
 
@@ -258,7 +258,7 @@ HGC (GDI and Biological distance) |v12.2015
 The training sets and validation sets are annotated with these versions. The original VarCoPP model is trained based on these datasets. 
 
 
-## 8. New VarCoPP model
+## 8. VarCoPP model 1.1 - April 2021
 
 In 2021, we updated the VarCoPP model after re-training our training datasets with the most updated versions of all features. This model is present at the ./models/ directory as "VarCoPP_model_V2.p.gz". The new updated versions of the features are: 
 
@@ -274,10 +274,12 @@ The new prediction probability threshold for this model is: 0.532
 
 DO NOT use the training sets present here with the new model, as the training sets correspond to those described in the paper, with the versions of the annotated features described in the paper. 
 
-The new model can be used directly online at: https://orval.ibsquare.be/. 
+
+## 9. VarCoPP model 2.3 - May 2023 
+In May 2023, we published a new version of VarCoPP trained on OLIDA (https://olida.ibsquare.be/) and by using new features. This is model is the current running model in ORVAL and the code is available on GitHub at: https://github.com/oligogenic/VarCoPP2.0. 
 
 
-## 9. Contributors
+## 10. Contributors
 
 Main contributor for source code: Sofia Papadimitriou
 

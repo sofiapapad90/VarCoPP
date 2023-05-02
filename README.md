@@ -276,7 +276,7 @@ DO NOT use the training sets present here with the new model, as the training se
 
 
 ## 9. VarCoPP model 2.3 - May 2023 
-In May 2023, we published a new version of VarCoPP trained on OLIDA (https://olida.ibsquare.be/) and by using new features. This is model is the current running model in ORVAL and the code is available on GitHub at: https://github.com/oligogenic/VarCoPP2.0. 
+In May 2023, we published a new version of VarCoPP trained on OLIDA (https://olida.ibsquare.be/) and by using new features. The paper can be found here: https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-023-05291-3. This model is the current running model in ORVAL and the code is available on GitHub at: https://github.com/oligogenic/VarCoPP2.0. 
 
 
 ## 10. Contributors
